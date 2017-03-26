@@ -1,0 +1,20 @@
+create database customer_system;
+use customer_system;
+create table customer(
+
+	id varchar(100) primary key,
+	name varchar(30),
+	gender varchar(10),
+	birthday date,
+	email varchar(20),
+	cellphone varchar(20),
+	preference varchar(100),
+	type varchar(20),
+	description varchar(250)
+); 
+
+create user 'admin'@'localhost' identified by '123';
+
+--grant,revoke
+grant all on customer_system.* to 'admin'@'localhost';
+
